@@ -1,0 +1,46 @@
+<html>
+   <head>
+      <title>AngularJS First Application</title>
+   </head>
+   
+   <body>
+      <h1>Sample Application</h1>
+      
+      <div ng-app = "mainApp" ng-controller="studentController">
+	  <p> fullname from Function :{{student.fullname()}} </p>
+	  
+      </div>
+      
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"> </script>
+	  <script
+	  <script>
+	    var mainApp = angular.module("mainApp",[]);
+		mainApp.controller('studentController',function($scope){
+			$scope.student= { 
+							firstName:"gopala",
+							lastName:"krishnan",
+			
+			fullname: function() {
+                  var studentObject;
+                  studentObject = $scope.student;
+                  return studentObject.firstName + " " + studentObject.lastName;
+			}
+		  };
+		});
+	  </script>
+      
+   </body>
+</html>
+
+<!--
+
+$scope.student is property of studentController object.
+
+firstName and lastName are two properties of $scope.student object. We've passed the default values to them.
+
+fullName is the function of $scope.student object whose task is to return the combined name.
+
+In fullName function we're getting the student object and then return the combined name.
+
+
+-->
