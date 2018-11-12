@@ -1,0 +1,39 @@
+<html>
+   <head>
+      <title>AngularJS First Application</title>
+   </head>
+   
+   <body>
+      <h1>Sample Application</h1>
+      
+      <div ng-app = "" ng-init="quantity=1;cost=30; student={firstname:'gopal',lastname:'krishnan'}; marks=[10,20,30,40,50];">
+	  <p><span> firstname:{{student.firstname + " lastname:" + student.lastname}} </span> </p>
+	  <p> total:{{quantity*cost}} </p>
+	  <p> highest marks:{{marks[4]}} </p>
+      </div>
+      
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+      </script>
+      
+   </body>
+</html>
+
+<!--
+
+Using numbers
+<p>Expense on Books : {{cost * quantity}} Rs</p>
+
+Using Strings
+important: if you are declaring string then include with ''
+<p>Hello {{student.firstname + " " + student.lastname}}!</p>
+
+Using Object
+<p>Roll No: {{student.rollno}}</p>
+
+Using Array
+<p>Marks(Math): {{marks[3]}}</p>
+
+
+
+
+-->
